@@ -26,8 +26,8 @@ const PostsContainer = styled.div`
 const Posts = () => {
 	return (
 		<Container>
-			<h2>Posts</h2>
 			<PostsContainer>
+				<h2>Posts</h2>
 				<Post />
 				<Post />
 				<Post />

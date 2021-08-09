@@ -6,6 +6,8 @@ const Container = styled.div`
 	/* box-shadow: 1px 2px 4px 1px #b7b7b7; */
 	border: 1px solid #ccc;
 	display: flex;
+
+	justify-content: space-between;
 	@media (min-width: 320px) {
 		margin-bottom: 15px;
 		flex-flow: row wrap;
@@ -14,13 +16,15 @@ const Container = styled.div`
 		margin-right: 15px;
 		margin-bottom: 15px;
 		flex: 1 1;
-		border: none;
-		border-bottom: 1px solid #8f8f8f;
+		border: 1px solid #ccc;
 	}
 
 	@media (min-width: 1024px) {
 		width: 800px;
 		min-width: 900px;
+		border: none;
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 0;
 	}
 
 	p {
@@ -51,13 +55,9 @@ const ButtonContainer = styled.div`
 	flex-flow: column wrap;
 	justify-content: center;
 
-	padding-left: 10px;
-	padding-right: 10px;
-
 	button {
 		margin-bottom: 20px;
-		padding: 10px 20px;
-		border: none;
+		border: 1px solid #ccc;
 		background-color: #fff;
 	}
 `
@@ -68,6 +68,24 @@ const Delete = styled.button`
 	img {
 		width: 40px;
 		height: 40px;
+	}
+`
+
+const PostImage = styled.div`
+	width: 300px;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	img {
+		@media (min-width: 320px) {
+			display: none;
+		}
+		@media (min-width: 600px) {
+			display: flex;
+		}
+		width: 165px;
+		height: auto;
 	}
 `
 
@@ -83,6 +101,15 @@ const Post = () => {
 				</p>
 				<h3>Salary: $3,000,000 - $5,000,000 </h3>
 			</JobInfo>
+
+			<PostImage>
+				<img
+					src='images/job-posting-image.svg'
+					alt='job posting'
+					width='50'
+					height='50'
+				/>
+			</PostImage>
 
 			<ButtonContainer>
 				<Save>

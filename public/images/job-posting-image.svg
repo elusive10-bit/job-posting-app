@@ -13,7 +13,7 @@
    height="50.0px"
    width="50.0px"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   sodipodi:docname="trash.svg">
+   sodipodi:docname="job-posting-image.svg">
   <defs
      id="defs833" />
   <sodipodi:namedview
@@ -35,7 +35,7 @@
      inkscape:window-x="182"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:snap-global="false">
+     inkscape:snap-global="true">
     <inkscape:grid
        id="grid1403"
        type="xygrid" />
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,18 +56,22 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <g
-       id="g836"
-       transform="rotate(-90,25.001526,24.998473)">
-      <path
-         d="M 6.5052853,12.941372 H 43.494715 V 49.930801 H 6.5052853 Z"
-         style="fill:#ff2a2a;stroke:none;stroke-width:2.66379;stroke-opacity:0.492625"
-         id="rect860" />
-      <path
-         sodipodi:nodetypes="ccccccccc"
-         id="rect862"
-         style="fill:#ff2a2a;fill-opacity:1;stroke:none;stroke-width:0.872234;stroke-opacity:0.492625"
-         d="M 18.764574,0.06309283 V 5.0159075 H 6.4184847 V 8.9632633 H 43.581515 V 5.0159075 H 31.235424 V 0.06309283 c -8.181904,0 -12.341066,0 -12.47085,0 z" />
-    </g>
+    <rect
+       y="-0.09848284"
+       x="-0.09848284"
+       height="50.098484"
+       width="50.029285"
+       id="rect838"
+       style="fill:#6b4000;stroke-width:2.00336;stroke-opacity:0.492625;fill-opacity:1" />
+    <text
+       id="text836"
+       y="39.511307"
+       x="10.912253"
+       style="font-size:40px;line-height:1.25;font-family:sans-serif;word-spacing:0px;fill:#ffffff;fill-opacity:1"
+       xml:space="preserve"><tspan
+         y="39.511307"
+         x="10.912253"
+         id="tspan834"
+         sodipodi:role="line">C</tspan></text>
   </g>
 </svg>
