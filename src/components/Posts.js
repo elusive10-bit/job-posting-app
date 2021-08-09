@@ -2,21 +2,30 @@ import React from 'react'
 import Post from './Post'
 import styled from 'styled-components'
 
+const Container = styled.div`
+	display: flex;
+	flex-flow: column wrap;
+
+	@media (min-width: 1024px) {
+		align-items: center;
+	}
+`
+
 const PostsContainer = styled.div`
 	display: flex;
-	flex-flow: row wrap;
 
 	@media (min-width: 320px) {
 		flex-flow: column wrap;
 	}
 	@media (min-width: 768px) {
-		flex-flow: row wrap;
+		flex-flow: column wrap;
+		justify-content: center;
 	}
 `
 
 const Posts = () => {
 	return (
-		<div>
+		<Container>
 			<h2>Posts</h2>
 			<PostsContainer>
 				<Post />
@@ -31,7 +40,7 @@ const Posts = () => {
 				<Post />
 				<Post />
 			</PostsContainer>
-		</div>
+		</Container>
 	)
 }
 

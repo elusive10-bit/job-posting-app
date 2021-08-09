@@ -16,6 +16,15 @@ const Footer = styled.div`
 	justify-content: space-between;
 	color: #fff;
 	align-items: center;
+
+	li {
+		line-height: 1.55rem;
+	}
+
+	h3 {
+		font-size: 1.1rem;
+		font-weight: 400;
+	}
 `
 
 const LinkContainer = styled.div`
@@ -26,6 +35,10 @@ const LinkContainer = styled.div`
 	ul li {
 		list-style-type: none;
 		text-decoration: none;
+	}
+
+	div {
+		margin-right: 15px;
 	}
 `
 
@@ -44,31 +57,31 @@ function App() {
 				<LinkContainer>
 					<div>
 						<ul>
-							<li>Link</li>
-							<li>Link</li>
-							<li>Link</li>
-							<li>Link</li>
+							<li>Home</li>
+							<li>About Us</li>
+							<li>Contact</li>
+							<li>Email</li>
 						</ul>
 					</div>
 					<div>
 						<ul>
-							<li>Link</li>
-							<li>Link</li>
-							<li>Link</li>
-							<li>Link</li>
+							<li>LinkedIn</li>
+							<li>Footer Link</li>
+							<li>Hello</li>
+							<li>World</li>
 						</ul>
 					</div>
 					<div>
 						<ul>
-							<li>Link</li>
-							<li>Link</li>
-							<li>Link</li>
-							<li>Link</li>
+							<li>Link Again</li>
+							<li>Still a link</li>
+							<li>Again Link</li>
+							<li>Regular Link</li>
 						</ul>
 					</div>
 				</LinkContainer>
 
-				<h3>This is Footer</h3>
+				<h3>&copy; All rights reserved 2021 - 2022</h3>
 			</Footer>
 		</div>
 	)

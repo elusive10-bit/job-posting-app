@@ -21,11 +21,21 @@ const Nav = () => {
 	return (
 		<Container>
 			<div className='logo'>
-				<img src='images/dummy-logo.svg' alt='dummy logo' />
+				<img
+					src='images/dummy-logo.svg'
+					alt='dummy logo'
+					width='50'
+					height='50'
+				/>
 			</div>
 
 			<Burger>
-				<img src='images/burger-menu.svg' alt='burger menu' />
+				<img
+					src='images/burger-menu.svg'
+					alt='burger menu'
+					width='50'
+					height='50'
+				/>
 			</Burger>
 		</Container>
 	)

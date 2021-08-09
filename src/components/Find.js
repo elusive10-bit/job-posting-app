@@ -3,13 +3,18 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
+
+	form {
+		display: flex;
+		flex-flow: column wrap;
+	}
 	input {
-		height: 40px;
+		height: 50px;
 		padding: 10px 20px;
 		padding-left: 70px;
 		font-size: 1.1rem;
-		flex: 1;
+		flex: 1 1 40px;
 		border: 1px solid #969696;
 		background-image: url(images/find.svg);
 		background-repeat: no-repeat;
@@ -19,10 +24,54 @@ const Container = styled.div`
 	}
 `
 
+const FilterContainer = styled.div`
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+
+	h3 {
+		margin-right: 10px;
+	}
+
+	div {
+		flex: 1;
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	button:first-child {
+	}
+
+	button {
+		@media (min-width: 320px) {
+			margin-right: 5px;
+		}
+		@media (min-width: 768px) {
+			margin-right: 10px;
+		}
+		padding: 8px 20px;
+		border: 1px solid #ccc;
+		background-color: #3c3c3c;
+		color: #fff;
+	}
+`
+
 const Find = () => {
 	return (
 		<Container>
-			<input type='text' />
+			<form>
+				<label htmlFor='search'>Search</label>
+				<input type='text' id='search' />
+			</form>
+
+			<FilterContainer>
+				<h3>Filter</h3>
+				<div>
+					<button>Remote</button>
+					<button>Added Recently</button>
+					<button>Popular</button>
+				</div>
+			</FilterContainer>
 		</Container>
 	)
 }
