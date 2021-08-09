@@ -2,34 +2,33 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-	padding: 5px 20px;
 	/* box-shadow: 1px 2px 4px 1px #b7b7b7; */
 	border: 1px solid #ccc;
 	display: flex;
+	padding: 10px 25px;
 
-	justify-content: space-between;
 	@media (min-width: 320px) {
 		margin-bottom: 15px;
-		flex-flow: row wrap;
+
+		flex-flow: column wrap;
 	}
 	@media (min-width: 728px) {
+		flex-flow: row wrap;
 		margin-right: 15px;
 		margin-bottom: 15px;
-		flex: 1 1;
 		border: 1px solid #ccc;
 	}
 
 	@media (min-width: 1024px) {
-		width: 800px;
-		min-width: 900px;
 		border: none;
 		border-bottom: 1px solid #ccc;
 		margin-bottom: 0;
+		min-width: 850px;
 	}
 
 	p {
-		line-height: 1.62rem;
-		max-width: 500px;
+		line-height: 1.42rem;
+		max-width: 400px;
 	}
 
 	:hover {
@@ -39,7 +38,6 @@ const Container = styled.div`
 
 const JobInfo = styled.div`
 	flex: 1;
-
 	h2 {
 		font-weight: 600;
 	}
@@ -48,6 +46,14 @@ const JobInfo = styled.div`
 		font-weight: 500;
 		font-size: 1.1rem;
 	}
+
+	@media (min-width: 320px) {
+		order: 2;
+	}
+
+	@media (min-width: 728px) {
+		order: 1;
+	}
 `
 
 const ButtonContainer = styled.div`
@@ -55,8 +61,21 @@ const ButtonContainer = styled.div`
 	flex-flow: column wrap;
 	justify-content: center;
 
+	@media (min-width: 320px) {
+		flex-flow: row wrap;
+		order: 3;
+	}
+	@media (min-width: 728px) {
+		flex-flow: column wrap;
+		order: 3;
+	}
+
 	button {
-		margin-bottom: 20px;
+		@media (min-width: 320px) {
+			margin-right: 15px;
+			width: 70px;
+		}
+
 		border: 1px solid #ccc;
 		background-color: #fff;
 	}
@@ -72,19 +91,27 @@ const Delete = styled.button`
 `
 
 const PostImage = styled.div`
-	width: 300px;
 	display: flex;
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: center;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	@media (min-width: 768px) {
+		order: 2;
+	}
+
 	img {
 		@media (min-width: 320px) {
 			display: none;
 		}
-		@media (min-width: 600px) {
+		@media (min-width: 768px) {
 			display: flex;
+			width: 100px;
 		}
-		width: 165px;
 		height: auto;
 	}
 `
