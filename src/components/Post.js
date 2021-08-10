@@ -3,24 +3,20 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 	/* box-shadow: 1px 2px 4px 1px #b7b7b7; */
-	border: 1px solid #ccc;
+	border-bottom: 1px solid #b6b6b6;
 	display: flex;
 	padding: 10px 25px;
 
 	@media (min-width: 320px) {
-		margin-bottom: 15px;
-
 		flex-flow: column wrap;
 	}
 	@media (min-width: 728px) {
 		flex-flow: row wrap;
 		margin-right: 15px;
-		margin-bottom: 15px;
-		border: 1px solid #ccc;
 	}
 
 	@media (min-width: 1024px) {
-		min-width: 850px;
+		min-width: 950px;
 	}
 
 	p {
@@ -59,6 +55,8 @@ const ButtonContainer = styled.div`
 	justify-content: center;
 
 	@media (min-width: 320px) {
+		margin-top: 20px;
+		margin-bottom: 20px;
 		flex-flow: row wrap;
 		order: 3;
 	}

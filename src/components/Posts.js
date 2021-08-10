@@ -14,6 +14,11 @@ const Container = styled.div`
 const PostsContainer = styled.div`
 	display: flex;
 
+	h2 {
+		font-size: 1.55rem;
+		font-weight: 600;
+	}
+
 	@media (min-width: 320px) {
 		flex-flow: column wrap;
 	}

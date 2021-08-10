@@ -35,6 +35,7 @@ const FilterContainer = styled.div`
 
 	h3 {
 		margin-right: 10px;
+		font-weight: 500;
 	}
 
 	div {

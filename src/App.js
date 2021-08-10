@@ -87,8 +87,14 @@ const Header = styled.div`
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: center;
 	padding: 0px 10px;
+
+	span {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+	}
 `
 
 function App() {
@@ -108,7 +114,7 @@ function App() {
 						onClick={() => {
 							setShowMobileNav(!showMobileNav)
 						}}>
-						close
+						<img src='images/close.svg' alt='close' width='30' height='30' />
 					</span>
 				</Header>
 
