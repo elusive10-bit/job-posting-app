@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Nav from './components/Nav'
 import Find from './components/Find'
 import Posts from './components/Posts'
@@ -42,10 +42,86 @@ const LinkContainer = styled.div`
 	}
 `
 
+const OverlayNav = styled.div`
+	@media (min-width: 320px) {
+		display: none;
+		display: ${(props) => (props.show ? 'flex' : 'none')};
+	}
+
+	@media (min-width: 768px) {
+		display: none;
+	}
+
+	padding: 5px 10px;
+	position: absolute;
+	width: 100%;
+	background-color: #595b62;
+	z-index: 2;
+	flex-flow: column wrap;
+	color: #fff;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-flow: column wrap;
+	}
+
+	ul li {
+		display: flex;
+		margin: 0;
+		list-style-type: none;
+		line-height: 2rem;
+		font-size: 1.1rem;
+		padding: 5px 20px;
+		border-bottom: 1px solid #ccc;
+
+		:hover {
+			background-color: #fff;
+			color: #000;
+		}
+	}
+`
+
+const Header = styled.div`
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 0px 10px;
+`
+
 function App() {
+	const [showMobileNav, setShowMobileNav] = useState(false)
+
 	return (
 		<div className='App'>
-			<Nav />
+			<OverlayNav show={showMobileNav} setShow={setShowMobileNav}>
+				<Header>
+					<img
+						src='images/dummy-logo.svg'
+						alt='dummy logo'
+						width='50'
+						height='50'
+					/>
+					<span
+						onClick={() => {
+							setShowMobileNav(!showMobileNav)
+						}}>
+						close
+					</span>
+				</Header>
+
+				<ul>
+					<li>Home</li>
+					<li>About Us</li>
+					<li>Contact</li>
+					<li>FAQ</li>
+					<li>Link</li>
+				</ul>
+			</OverlayNav>
+
+			<Nav showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} />
 
 			<Main>
 				<Find />

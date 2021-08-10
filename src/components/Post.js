@@ -20,9 +20,6 @@ const Container = styled.div`
 	}
 
 	@media (min-width: 1024px) {
-		border: none;
-		border-bottom: 1px solid #ccc;
-		margin-bottom: 0;
 		min-width: 850px;
 	}
 
@@ -73,6 +70,10 @@ const ButtonContainer = styled.div`
 	button {
 		@media (min-width: 320px) {
 			margin-right: 15px;
+			width: 70px;
+		}
+		@media (min-width: 728px) {
+			margin-bottom: 15px;
 			width: 70px;
 		}
 
